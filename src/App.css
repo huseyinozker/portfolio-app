@@ -1,38 +1,125 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+:root{
+    --green:#2ECC71;
+    --lightgreen:#DDFFEC;
+    --framewhite:#FAFAFA;
+    --framedark:#7D7D7D;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+    font-family: 'Roboto', sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+.bolderText{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 64px;
+}
+@media screen and (max-width: 768px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+.dot {
+    height: 8px;
+    width: 8px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
   }
+.sideMenu{
+    background-color: transparent;
+    border: none;  
 }
+.outContainer{
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0px 30px;
+}
+.container > [class*=p-col] {
+    padding: 0px;
+}
+/* .p-menu .p-submenu-header{
+    background: transparent;
+    padding: 0px 32px;
+    font-size: 24px;
+    margin-bottom: 5%;
+}
+.p-menu .p-menuitem-link{
+    padding: 0.75rem 0rem;
+}*/
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.footer-list > li {
+    margin: 12px 0px;
 }
-
-.App-link {
-  color: #61dafb;
+.generalFrame{
+    transition: all 0.3s;
+    background-color: var(--framewhite);
+    border-radius: 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.generalFrame:hover{
+    background-color: var(--framedark);
 }
+.generalFrame .frameTitle{
+    font-weight: bold;
+    font-size: 36px;
+    color: var(--green);
+}
+.generalFrame:hover .hoverWhite{
+    color: white;
+}
+.customBtn{
+    background-color: var(--green);
+    color: white;
+    border: 0px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    padding: 8px 42px;
+    border-radius: 10px;
+    min-width: 152px;
+    cursor: pointer;
+}
+.itemDiv{
+    cursor: pointer;
+    border: 2px solid plum;
+    transition: all 0.3s;
+}
+.itemDiv:hover{
+    background-color: var(--surface-400);
+}
+.libraryDialog .p-dialog-header {
+    background-color: var(--surface-200);
+}
+.p-menubar.headermenu{
+    background-color: white;
+    border-radius: 0px;
+    border:none;
+    padding: 16px 0px;
+}
+.p-menuitem-text{
+    color: black;
+    font-weight: bold;
+    padding: 0px 32px;
+}
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text{
+    color: black;
+}
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link{
+    border-radius: 10px;
+}
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:not(.p-disabled):hover {
+    color: white;
+    background-color: var(--green);
+}
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:not(.p-disabled):hover > .p-menuitem-text{
+    color: white;
+} 
